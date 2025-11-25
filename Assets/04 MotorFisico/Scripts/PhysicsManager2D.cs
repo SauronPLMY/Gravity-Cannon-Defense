@@ -131,11 +131,19 @@ namespace PUCV.PhysicEngine2D
             if (_colliders == null || _colliders.Count == 0) return;
             foreach (CustomCollider2D collider in _colliders)
             {
-                CustomRigidbody2D rigidbody = collider.rigidBody;
-                if (rigidbody == null) continue;
-                Vector2 rigidbodyPos = rigidbody.GetWorldPosition();
-                rigidbodyPos += rigidbody.velocity*deltaTime;
-                rigidbody.SetWoldPosition(rigidbodyPos);
+                GameRigidbody2D gameRigidbody = collider.GetComponent<GameRigidbody2D>();
+                if (gameRigidbody != null)
+                {
+                    gameRigidbody.UpdatePhysics(deltaTime);
+                }
+                else
+                {
+                    CustomRigidbody2D rigidbody = collider.rigidBody;
+                    if (rigidbody == null) continue;
+                    Vector2 rigidbodyPos = rigidbody.GetWorldPosition();
+                    rigidbodyPos += rigidbody.velocity * deltaTime;
+                    rigidbody.SetWoldPosition(rigidbodyPos);
+                }
             }
         }
     }

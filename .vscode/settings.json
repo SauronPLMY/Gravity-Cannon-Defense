@@ -66,5 +66,5 @@
     "explorer.fileNesting.patterns": {
         "*.sln": "*.csproj"
     },
-    "dotnet.defaultSolution": "pucv2502_sim2D-master.sln"
+    "dotnet.defaultSolution": "Gravity-Cannon-Defense.sln"
 }
