@@ -10,9 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 5416001370024402787}
   - component: {fileID: 7367726777687558998}
+  - component: {fileID: 394249930939797534}
+  - component: {fileID: 1586857400984844386}
   m_Layer: 10
   m_Name: Planet
-  m_TagString: Untagged
+  m_TagString: Planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -87,3 +89,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &394249930939797534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2948077384519046109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d88bb54824e6aa940b9fd120531f2aa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shapeType: 0
+  radius: 0.5
+  size: {x: 1, y: 1}
+--- !u!114 &1586857400984844386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2948077384519046109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34cfe477e7768e44185d98ff6e21e4b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mass: 100
+  drag: 0.1
+  useGravity: 0
+  velocity: {x: 0, y: 0}
+  position: {x: 0, y: 0}

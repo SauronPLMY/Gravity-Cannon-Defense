@@ -10,6 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8249016738182725103}
   - component: {fileID: 6766224127460233292}
+  - component: {fileID: 6002123017973588431}
+  - component: {fileID: 7186789203900122117}
+  - component: {fileID: -5461090208691481865}
   m_Layer: 12
   m_Name: Cannon
   m_TagString: Untagged
@@ -87,3 +90,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6002123017973588431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851179823074084552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d88bb54824e6aa940b9fd120531f2aa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shapeType: 1
+  radius: 0.5
+  size: {x: 4, y: 1}
+--- !u!114 &7186789203900122117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851179823074084552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34cfe477e7768e44185d98ff6e21e4b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mass: 1
+  drag: 0.1
+  useGravity: 0
+  velocity: {x: 0, y: 0}
+  position: {x: 0, y: 0}
+--- !u!114 &-5461090208691481865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851179823074084552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd19bd7fe3b89e8419874a9d30b8a500, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 8297328455050745465, guid: c1eae60d547c75c408731ad0cdf65b51, type: 3}
+  shootForce: 20
+  rotationSpeed: 90
+  shootKey: 32
+  projectileSpawnDistance: 2

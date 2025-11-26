@@ -1,0 +1,59 @@
+#pragma kernel CSMain
+
+struct PhysicsBody
+{
+    float2 position;
+    float2 velocity;
+    float mass;
+    int useGravity;
+};
+
+struct Planet
+{
+    float2 position;
+    float mass;
+};
+
+RWStructuredBuffer<PhysicsBody> _Bodies;
+StructuredBuffer<Planet> _Planets;
+
+cbuffer GravityParams
+{
+    float _GlobalGravity;
+    uint _BodyCount;
+    uint _PlanetCount;
+    float _DeltaTime;
+};
+
+[numthreads(64, 1, 1)]
+void CSMain (uint id : SV_DispatchThreadID)
+{
+    if (id >= _BodyCount)
+        return;
+
+    PhysicsBody body = _Bodies[id];
+
+    if (body.useGravity == 0)
+        return;
+
+    float2 totalGravity = float2(0, 0);
+
+    for (uint i = 0; i < _PlanetCount; i++)
+    {
+        Planet planet = _Planets[i];
+        
+        float2 direction = planet.position - body.position;
+        float distance = length(direction);
+        
+        if (distance < 0.1f)
+            continue;
+            
+        float gravityStrength = _GlobalGravity * planet.mass / (distance * distance);
+        totalGravity += normalize(direction) * gravityStrength;
+    }
+
+    body.velocity += totalGravity * _DeltaTime;
+    body.position += body.velocity * _DeltaTime;
+
+    _Bodies[id] = body;
+}
