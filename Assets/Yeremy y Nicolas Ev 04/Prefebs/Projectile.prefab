@@ -10,10 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1848710528636160777}
   - component: {fileID: 884199321193576694}
-  - component: {fileID: 3810289741057044866}
-  - component: {fileID: 5589701599727910769}
-  - component: {fileID: 6014248750291788397}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,55 +87,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3810289741057044866
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8297328455050745465}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73fa3517eb1851a4da5411d6fba091d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 0
-  circleOverride:
-    kind: 0
-    center: {x: 0, y: 0}
-    radius: 0
-  triangleShape:
-    kind: 0
-    A: {x: -0.5, y: -0.3}
-    B: {x: -1, y: -1}
-    C: {x: 1, y: -1}
---- !u!114 &5589701599727910769
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8297328455050745465}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46b0ecf214fd11f4991713284e56d357, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocity: {x: 0, y: 0}
-  mass: 1
-  useGravity: 1
-  gravityScale: 1
-  useBuoyancy: 0
-  buoyancyDensity: 0.5
---- !u!114 &6014248750291788397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8297328455050745465}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19ebf3b11ca1b2342a569ecebee1026c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

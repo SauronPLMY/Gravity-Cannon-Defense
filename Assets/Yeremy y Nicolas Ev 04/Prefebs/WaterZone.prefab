@@ -10,9 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2722667725606701056}
   - component: {fileID: 4295109349556040960}
-  - component: {fileID: 633333590936465882}
-  - component: {fileID: 1130435959578126833}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: WaterZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,39 +87,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &633333590936465882
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1852127749357600220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73fa3517eb1851a4da5411d6fba091d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 2
-  circleOverride:
-    kind: 0
-    center: {x: 0, y: 0}
-    radius: 0
-  triangleShape:
-    kind: 0
-    A: {x: -0.5, y: -0.3}
-    B: {x: -1, y: -1}
-    C: {x: 1, y: -1}
---- !u!114 &1130435959578126833
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1852127749357600220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcd6a993495cd3e488cb6b9ee9b5602e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fluidDensity: 1
-  buoyancyForce: {x: 0, y: 15}

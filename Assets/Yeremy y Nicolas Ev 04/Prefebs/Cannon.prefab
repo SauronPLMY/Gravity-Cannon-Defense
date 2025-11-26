@@ -10,9 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8249016738182725103}
   - component: {fileID: 6766224127460233292}
-  - component: {fileID: 1297829937522808921}
-  - component: {fileID: 6504829255439549194}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Cannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,43 +87,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1297829937522808921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 851179823074084552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73fa3517eb1851a4da5411d6fba091d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 1
-  circleOverride:
-    kind: 0
-    center: {x: 0, y: 0}
-    radius: 0
-  triangleShape:
-    kind: 0
-    A: {x: -0.5, y: -0.3}
-    B: {x: -1, y: -1}
-    C: {x: 1, y: -1}
---- !u!114 &6504829255439549194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 851179823074084552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46b0ecf214fd11f4991713284e56d357, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocity: {x: 0, y: 0}
-  mass: 1
-  useGravity: 0
-  gravityScale: 1
-  useBuoyancy: 0
-  buoyancyDensity: 0.5

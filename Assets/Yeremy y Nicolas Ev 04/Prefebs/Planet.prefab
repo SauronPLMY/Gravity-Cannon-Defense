@@ -10,8 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5416001370024402787}
   - component: {fileID: 7367726777687558998}
-  - component: {fileID: 6440120881984732756}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Planet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,25 +87,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6440120881984732756
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2948077384519046109}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73fa3517eb1851a4da5411d6fba091d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 0
-  circleOverride:
-    kind: 0
-    center: {x: 0, y: 0}
-    radius: 0
-  triangleShape:
-    kind: 0
-    A: {x: -0.5, y: -0.3}
-    B: {x: -1, y: -1}
-    C: {x: 1, y: -1}
