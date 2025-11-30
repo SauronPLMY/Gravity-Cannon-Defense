@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1852127749357600220
+--- !u!1 &3464963432513057610
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2722667725606701056}
-  - component: {fileID: 4295109349556040960}
-  - component: {fileID: 3743152852250786683}
-  - component: {fileID: 5169540850527632116}
-  - component: {fileID: 3509632966203088305}
-  m_Layer: 11
-  m_Name: WaterZone
-  m_TagString: Water
+  - component: {fileID: 7569198796412261167}
+  - component: {fileID: 3913251041558359670}
+  - component: {fileID: 8730588308961053998}
+  - component: {fileID: 3461117848316470513}
+  m_Layer: 0
+  m_Name: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2722667725606701056
+--- !u!4 &7569198796412261167
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1852127749357600220}
+  m_GameObject: {fileID: 3464963432513057610}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.751983, y: 11.199025, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 0}
+  m_LocalPosition: {x: 28.476759, y: -1.0147319, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &4295109349556040960
+--- !u!212 &3913251041558359670
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1852127749357600220}
+  m_GameObject: {fileID: 3464963432513057610}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -80,7 +79,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0, g: 0.8862745, b: 1, a: 0.23921569}
+  m_Color: {r: 1, g: 0.06132078, b: 0.06132078, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -90,13 +89,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3743152852250786683
+--- !u!114 &8730588308961053998
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1852127749357600220}
+  m_GameObject: {fileID: 3464963432513057610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8d41b7dd9c9bcc4b90b64ad8f7e7d19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  health: 4
+--- !u!114 &3461117848316470513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3464963432513057610}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d88bb54824e6aa940b9fd120531f2aa8, type: 3}
@@ -104,34 +117,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shapeType: 1
   radius: 0.5
-  size: {x: 4, y: 1}
-  isTrigger: 1
---- !u!114 &5169540850527632116
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1852127749357600220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34cfe477e7768e44185d98ff6e21e4b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocity: {x: 0, y: 0}
-  useGravity: 0
-  mass: 1
---- !u!114 &3509632966203088305
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1852127749357600220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d108a1d2ebcc7c4c9e7d32df7f938c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buoyancyForce: 15
-  waterDrag: 0.8
+  size: {x: 1.2, y: 1.19}
+  isTrigger: 0

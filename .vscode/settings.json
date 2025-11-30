@@ -66,5 +66,5 @@
     "explorer.fileNesting.patterns": {
         "*.sln": "*.csproj"
     },
-    "dotnet.defaultSolution": "Gravity-Cannon-Defense.sln"
+    "dotnet.defaultSolution": "Gravity-Cannon-Defense.slnx"
 }
