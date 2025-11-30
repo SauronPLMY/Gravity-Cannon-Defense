@@ -90,14 +90,12 @@ public class Bullet : MonoBehaviour, IHasCollider
     {
         if (collisionInfo.otherCollider.gameObject.layer == OnColliderEnter.LayerToInt(layer))
         {
-            Debug.Log("Tocamos planeta");
             gravityAff = collisionInfo.otherCollider.gameObject.GetComponent<GravityAffector>().gravity;
             SetGravityAffector(collisionInfo.otherCollider.transform);
         }
         
         if (collisionInfo.otherCollider.gameObject.layer == OnColliderEnter.LayerToInt(waterLayer))
         {
-            Debug.Log("Tocamos el agua");
             buoyancyForceMultiplier = collisionInfo.otherCollider.gameObject.GetComponent<WaterAffector>().buoyancy;
             density = collisionInfo.otherCollider.gameObject.GetComponent<WaterAffector>().waterDensity;
             waterAffector = collisionInfo.otherCollider.transform;
@@ -106,6 +104,8 @@ public class Bullet : MonoBehaviour, IHasCollider
 
     public void OnInformCollisionExit2D(CollisionInfo collisionInfo)
     {
+        if (this == null || transform == null) return;
+
         if (collisionInfo.otherCollider != null)
         {
             if (collisionInfo.otherCollider.gameObject.layer == OnColliderEnter.LayerToInt(layer))
