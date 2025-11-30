@@ -127,12 +127,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0}
-  m_canRebote: 0
-  mass: 1
-  restitution: 1
-  friction: 0.2
-  linearDamping: 0.01
-  m_damping: 0.7
+  restitutionValue: 0.9
+  frictionValue: 0.5
+  dampingValue: 0.4
 --- !u!114 &-1270269697746440296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,4 +152,4 @@ MonoBehaviour:
     A: {x: -0.5, y: -0.3}
     B: {x: -1, y: -1}
     C: {x: 1, y: -1}
-  m_isTrigger: 1
+  isTrigger: 1

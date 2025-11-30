@@ -28,9 +28,9 @@ public class OnColliderEnter : MonoBehaviour, IHasCollider
         }
     }
 
-    public static int LayerToInt(LayerMask m_layer)
+    public static int LayerToInt(LayerMask _layer)
     {
-        int layer = Mathf.RoundToInt(Mathf.Log(m_layer.value, 2));
+        int layer = Mathf.RoundToInt(Mathf.Log(_layer.value, 2));
         return layer;
     }
 }

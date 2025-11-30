@@ -7,14 +7,10 @@ namespace PUCV.PhysicEngine2D
     public class CustomRigidbody2D : MonoBehaviour
     {
         public Vector2 velocity;
-        public bool m_canRebote;
-
         //-> COMPONENTES BÁSICOS DEL RBD
-        public float mass = 1.0f;
-        public float restitution = 1;
-        public float friction = 0.2f;
-        public float linearDamping = 0.01f;
-        public float m_damping = 0.7f;
+        public float restitutionValue = 1;
+        public float frictionValue = 0.5f;
+        public float dampingValue = 0.7f;
 
         private CustomCollider2D _customCollider;
 

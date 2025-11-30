@@ -55,8 +55,8 @@ namespace PUCV.PhysicEngine2D
             
             foreach (var currCollisionInfo in _currentCollisionList)
             {
-                if (currCollisionInfo.bodyACollider.m_isTrigger ||
-                    currCollisionInfo.bodyBCollider.m_isTrigger)
+                if (currCollisionInfo.bodyACollider.isTrigger ||
+                    currCollisionInfo.bodyBCollider.isTrigger)
                 {
                     continue;
                 }
@@ -85,22 +85,12 @@ namespace PUCV.PhysicEngine2D
                 //Reflect velocities
                 if (customRigidbody2DA)
                 {
-                    if (!customRigidbody2DA.m_canRebote) 
-                    {
-                        customRigidbody2DA.velocity = new Vector2(customRigidbody2DA.velocity.x, 0);
-                        continue;
-                    }
-
-                    // Vector2 velocity = customRigidbody2DA.velocity;
-                    // velocity = currCollisionInfo.contactNormalAB.normalized*velocity.magnitude;
-                    // customRigidbody2DA.velocity = velocity;
-
                     Vector2 v = customRigidbody2DA.velocity;
                     Vector2 n = currCollisionInfo.contactNormalAB.normalized;
                     
                     float initialEnergy = v.sqrMagnitude;
                     
-                    float restitution = customRigidbody2DA.restitution;
+                    float restitution = customRigidbody2DA.restitutionValue;
                     
                     float normalSpeed = Vector2.Dot(v, n);
                     Vector2 normalComponent = normalSpeed * n;
@@ -108,7 +98,7 @@ namespace PUCV.PhysicEngine2D
                     
                     Vector2 reflectedNormal = -normalComponent * restitution;
                     
-                    float friction = customRigidbody2DA.friction;
+                    float friction = customRigidbody2DA.frictionValue;
                     Vector2 dampedTangent = tangentComponent * (1f - friction);
                     
                     Vector2 finalVelocity = reflectedNormal + dampedTangent;
@@ -119,25 +109,17 @@ namespace PUCV.PhysicEngine2D
                         finalVelocity = finalVelocity.normalized * Mathf.Sqrt(initialEnergy);
                     }
                     
-                    customRigidbody2DA.velocity = finalVelocity * customRigidbody2DA.m_damping;
+                    float d = Mathf.Clamp01(customRigidbody2DA.dampingValue);
+                    customRigidbody2DA.velocity = finalVelocity * (1f - d);
                 }
                 if (customRigidbody2DB)
                 {
-                    if (!customRigidbody2DB.m_canRebote) 
-                    {
-                        customRigidbody2DB.velocity = new Vector2(customRigidbody2DB.velocity.x, 0);
-                        continue;
-                    }
-                    // Vector2 velocity = customRigidbody2DB.velocity;
-                    // velocity = currCollisionInfo.contactNormalBA*velocity.magnitude;
-                    // customRigidbody2DB.velocity = velocity;
-
                     Vector2 v = customRigidbody2DB.velocity;
                     Vector2 n = currCollisionInfo.contactNormalAB.normalized;
                     
                     float initialEnergy = v.sqrMagnitude;
                     
-                    float restitution = customRigidbody2DB.restitution;
+                    float restitution = customRigidbody2DB.restitutionValue;
                     
                     float normalSpeed = Vector2.Dot(v, n);
                     Vector2 normalComponent = normalSpeed * n;
@@ -145,7 +127,7 @@ namespace PUCV.PhysicEngine2D
                     
                     Vector2 reflectedNormal = -normalComponent * restitution;
                     
-                    float friction = customRigidbody2DB.friction;
+                    float friction = customRigidbody2DB.frictionValue;
                     Vector2 dampedTangent = tangentComponent * (1f - friction);
                     
                     Vector2 finalVelocity = reflectedNormal + dampedTangent;
@@ -156,7 +138,8 @@ namespace PUCV.PhysicEngine2D
                         finalVelocity = finalVelocity.normalized * Mathf.Sqrt(initialEnergy);
                     }
                     
-                    customRigidbody2DB.velocity = finalVelocity * customRigidbody2DB.m_damping;
+                    float d = Mathf.Clamp01(customRigidbody2DB.dampingValue);
+                    customRigidbody2DB.velocity = finalVelocity * (1f - d);
                 }
             }
         }

@@ -22,7 +22,7 @@ namespace PUCV.PhysicEngine2D
         
         private IHasCollider _colliderListener;
 
-        public bool m_isTrigger;
+        public bool isTrigger;
         
         [NonSerialized]
         public CustomRigidbody2D rigidBody;

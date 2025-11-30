@@ -315,7 +315,7 @@ MonoBehaviour:
     A: {x: -0.5, y: -0.3}
     B: {x: -1, y: -1}
     C: {x: 1, y: -1}
-  m_isTrigger: 0
+  isTrigger: 1
 --- !u!212 &493545614
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -624,7 +624,7 @@ MonoBehaviour:
     A: {x: -0.5, y: -0.3}
     B: {x: -1, y: -1}
     C: {x: 1, y: -1}
-  m_isTrigger: 1
+  isTrigger: 0
 --- !u!114 &956454205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -945,7 +945,7 @@ MonoBehaviour:
     A: {x: -0.5, y: -0.3}
     B: {x: -1, y: -1}
     C: {x: 1, y: -1}
-  m_isTrigger: 0
+  isTrigger: 1
 --- !u!212 &1633201912
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1158,7 +1158,7 @@ MonoBehaviour:
     A: {x: -0.5, y: -0.3}
     B: {x: -1, y: -1}
     C: {x: 1, y: -1}
-  m_isTrigger: 1
+  isTrigger: 0
 --- !u!114 &1697726336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1610,7 +1610,7 @@ MonoBehaviour:
     A: {x: -0.5, y: -0.3}
     B: {x: -1, y: -1}
     C: {x: 1, y: -1}
-  m_isTrigger: 1
+  isTrigger: 0
 --- !u!114 &4295109348399754143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1717,7 +1717,7 @@ MonoBehaviour:
     A: {x: -0.5, y: -0.3}
     B: {x: -1, y: -1}
     C: {x: 1, y: -1}
-  m_isTrigger: 0
+  isTrigger: 1
 --- !u!114 &7367726776188940120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1786,7 +1786,7 @@ MonoBehaviour:
     A: {x: -0.5, y: -0.3}
     B: {x: -1, y: -1}
     C: {x: 1, y: -1}
-  m_isTrigger: 0
+  isTrigger: 0
 --- !u!114 &8249016737836498375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1800,12 +1800,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0}
-  m_canRebote: 0
-  mass: 1
-  restitution: 1
-  friction: 0.2
-  linearDamping: 0.01
-  m_damping: 0.7
+  restitutionValue: 1
+  frictionValue: 0.5
+  dampingValue: 0.7
 --- !u!212 &8249016737836498376
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -6,7 +6,7 @@ using CustomCollider2D = PUCV.PhysicEngine2D.CustomCollider2D;
 
 public static class SAT2DMath
 {
-    private const float PENETRATION_EPS = 0f;
+    private const float PENETRATION = 0f;
 
     public struct Sat2DCollisionResult
     {
@@ -72,7 +72,7 @@ public static class SAT2DMath
             }
         }
 
-        if (!res.collided || res.depth <= PENETRATION_EPS)
+        if (!res.collided || res.depth <= PENETRATION)
         {
             res.collided = false;
             res.depth = 0f;
@@ -249,7 +249,7 @@ public static class SAT2DMath
         ProjectPolygon(polyA, axis, out float minA, out float maxA);
         ProjectPolygon(polyB, axis, out float minB, out float maxB);
         overlap = GetOverlap(minA, maxA, minB, maxB);
-        return overlap > PENETRATION_EPS;
+        return overlap > PENETRATION;
     }
 
     // Punto más cercano del polígono a un punto externo. Devuelve también el índice del segmento más cercano.
@@ -336,7 +336,7 @@ public static class SAT2DMath
                     res = SAT2DMath.CircleVsPolygon(circ.Center, circ.CircleRadius, polyVerts);
                 }
                 
-                if (res.collided && res.depth > PENETRATION_EPS)
+                if (res.collided && res.depth > PENETRATION)
                 {
                     //TODO: Calcular punto de contacto más preciso
                     var collision = new InternalCollisionInfo(colA,colB,Vector2.zero,res.normal);
